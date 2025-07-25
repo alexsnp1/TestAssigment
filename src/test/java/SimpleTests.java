@@ -66,10 +66,10 @@ public class SimpleTests {
                 findBy(Condition.text("Расчётный счёт")).hover();
         $$("[data-test-id='text']").
                 findBy(Condition.text("Открыть счёт")).click();
+        sleep(1000);
         $$("[data-test-id='text']").
-                findBy(Condition.text("Расчётно-кассовое обслуживание для вашего бизнеса")).click();
-
-
+                findBy(Condition.text("Заявка на открытие счёта для бизнеса")).shouldBe(visible);
     }
+
 
 }
