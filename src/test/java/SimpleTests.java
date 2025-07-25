@@ -16,14 +16,12 @@ import static com.codeborne.selenide.Selenide.*;
 public class SimpleTests {
     @BeforeAll
     static void beforeAll() {
-//        Configuration.browserSize = "1";
-        Configuration.baseUrl = "https://demoqa.com";
         Configuration.pageLoadStrategy = "eager"; //при долгой загрузке не падает тест
         Configuration.holdBrowserOpen = true;
     }
 
     @Test
-    void simpleTest() {
+    void shouldOpenBusinessRegistrationTab() {
         open("https://alfabank.ru/");
         sleep(2000);
         $("[data-test-id='TabsHeader-mmb-title']").shouldBe(visible).click();
@@ -34,7 +32,7 @@ public class SimpleTests {
     }
 
     @Test
-    void simple2Test() {
+    void shouldSearchForDebitCardAndSeeResults() {
         open("https://alfabank.ru/");
         sleep(2000);
         $("[data-test-id='test-ya-button']").shouldBe(visible).click();
@@ -45,7 +43,7 @@ public class SimpleTests {
     }
 
     @Test
-    void simple3Test() {
+    void shouldNavigateToDepositOpeningPageAfterCalculation() {
         open("https://alfabank.ru/");
         sleep(2000);
         $("[data-test-id='amount-input']")
@@ -58,7 +56,7 @@ public class SimpleTests {
                 findBy(Condition.text("Как открыть вклад")).shouldBe(visible);
     }
     @Test
-    void simple4Test() {
+    void shouldNavigateToBusinessAccountOpeningThroughHover () {
         open("https://alfabank.ru/");
         sleep(2000);
         $("[data-test-id='test-sme']").hover();
@@ -69,6 +67,14 @@ public class SimpleTests {
         sleep(1000);
         $$("[data-test-id='text']").
                 findBy(Condition.text("Заявка на открытие счёта для бизнеса")).shouldBe(visible);
+    }
+    @Test
+    void shouldOpenEnglishVersion () {
+        open("https://alfabank.ru/");
+        sleep(2000);
+        $("[href='https://alfabank.ru/en/']").click();
+        $$("[data-test-id='text']").
+                findBy(Condition.text("The most phygital bank")).shouldBe(visible);
     }
 
 
