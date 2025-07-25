@@ -1,24 +1,15 @@
+package tests;
+
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
-import com.codeborne.selenide.selector.ByText;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Keys;
-
-import java.time.Duration;
-
 import static com.codeborne.selenide.Condition.*;
-import static com.codeborne.selenide.Selectors.byAttribute;
-import static com.codeborne.selenide.Selectors.byTagAndText;
 import static com.codeborne.selenide.Selenide.*;
 
-public class SimpleTests {
-    @BeforeAll
-    static void beforeAll() {
-        Configuration.pageLoadStrategy = "eager"; //при долгой загрузке не падает тест
-        Configuration.holdBrowserOpen = true;
-    }
+public class SimpleTests extends TestBase {
 
     @Test
     void shouldOpenBusinessRegistrationTab() {
