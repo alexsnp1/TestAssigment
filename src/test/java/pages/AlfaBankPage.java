@@ -18,7 +18,7 @@ public class AlfaBankPage {
 
     }
 
-    public AlfaBankPage checkTextResult(String textResult) {
+    public AlfaBankPage checkTextResults(String textResult) {
         $$("[data-test-id='text']")
                 .findBy(Condition.text(textResult)).should(Condition.appear, Duration.ofSeconds(10)).shouldBe(visible,
                         Duration.ofSeconds(10));

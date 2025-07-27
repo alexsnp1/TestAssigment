@@ -3,57 +3,104 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.AlfaBankPage;
 
+import static io.qameta.allure.Allure.step;
+
 @Tag("Alfa")
 public class AlfaTests extends TestBase {
     AlfaBankPage alfaBankPage = new AlfaBankPage();
 
     @Test
+    @Tag("Alfa")
     void shouldOpenBusinessRegistrationTab() {
-        alfaBankPage
-                .openPage()
-                .selectSmallBusinessTab()
-                .openBusinessRegistrationPage()
-                .checkTextResult("Регистрация бизнеса онлайн");
+        step("Open page", () -> {
+            alfaBankPage.openPage();
+        });
+        step("Select Small Business Tab", () -> {
+            alfaBankPage.selectSmallBusinessTab();
+        });
+        step("Open Business Registration Page", () -> {
+            alfaBankPage.openBusinessRegistrationPage();
+        });
+        step("Check Text Results", () -> {
+            alfaBankPage.checkTextResults("Регистрация бизнеса онлайн");
+        });
     }
 
     @Test
     void shouldSearchForDebitCardAndSeeResults() {
-        alfaBankPage
-                .openPage()
-                .waitForLoadingSite()
-                .openSearchBar()
-                .setValueToSearchBar()
-                .checkTextResult("Дебетовая карта");
+        step("Open page", () -> {
+            alfaBankPage.openPage();
+        });
+        step("Wait For Loading Site", () -> {
+            alfaBankPage.waitForLoadingSite();
+        });
+        step("Open Search Bar", () -> {
+            alfaBankPage.openSearchBar();
+        });
+        step("Set Value To Search Bar", () -> {
+            alfaBankPage.setValueToSearchBar();
+        });
+        step("Check Text Results", () -> {
+            alfaBankPage.checkTextResults("Дебетовая карта");
+        });
     }
 
     @Test
     void shouldNavigateToDepositOpeningPageAfterCalculation() {
-        alfaBankPage
-                .openPage()
-                .checkIfAmountValueCorrect()
-                .set3MonthsDepositTerm()
-                .disableNewMoneyConditionCheckbox()
-                .checkIfInterestRateCorrect()
-                .clickToOpenDepositButton()
-                .checkTextResult("Как открыть вклад");
+
+        step("Open page", () -> {
+            alfaBankPage.openPage();
+        });
+        step("Check If Amount Value is Correct", () -> {
+        alfaBankPage.checkIfAmountValueCorrect();
+        });
+        step("Set 3 Months Deposit Term", () -> {
+            alfaBankPage.set3MonthsDepositTerm();
+        });
+        step("Disable New Money Condition Checkbox", () -> {
+            alfaBankPage.disableNewMoneyConditionCheckbox();
+        });
+        step("Check If Interest Rate is Correct", () -> {
+                alfaBankPage.checkIfInterestRateCorrect();
+        });
+        step("Click To Open Deposit Button", () -> {
+                alfaBankPage.clickToOpenDepositButton();
+        });
+        step("Check Text Results", () -> {
+                alfaBankPage.checkTextResults("Как открыть вклад");
+        });
     }
     @Test
     void shouldNavigateToBusinessAccountOpeningThroughHover () {
-        alfaBankPage
-                .openPage()
-                .waitForLoadingSite()
-                .hoverToSmallBusinessAndIE()
-                .hoverToBusinessAccount()
-                .clickToOpenAccountButton()
-                .checkTextResult("Заявка на открытие счёта для бизнеса");
+        step("Open page", () -> {
+        alfaBankPage.openPage();
+        });
+        step("Wait For Loading Site", () -> {
+        alfaBankPage.waitForLoadingSite();
+        });
+        step("Hover To Small Business And IE(", () -> {
+        alfaBankPage.hoverToSmallBusinessAndIE();
+        });
+        step("Hover To Business Account", () -> {
+        alfaBankPage.hoverToBusinessAccount();
+        });
+        step("Click To Open Account Button", () -> {
+        alfaBankPage.clickToOpenAccountButton();
+        });
+        step("Check Text Results", () -> {
+        alfaBankPage.checkTextResults("Заявка на открытие счёта для бизнеса");
+        });
     }
     @Test
     void shouldOpenEnglishVersion () {
-        alfaBankPage
-                .openPage()
-                .clickToEnglishLanguageOfSite()
-                .checkTextResult("The most phygital bank");
+        step("Open page", () -> {
+        alfaBankPage.openPage();
+        });
+        step("Click To English Language Of Site", () -> {
+        alfaBankPage.clickToEnglishLanguageOfSite();
+        });
+        step("Check Text Results", () -> {
+        alfaBankPage.checkTextResults("The most phygital bank");
+        });
     }
-
-
 }
