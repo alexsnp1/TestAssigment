@@ -31,17 +31,10 @@ dependencies {
 
     )
 }
-//test {
-//    systemProperties += System.properties
-//    useJUnitPlatform()
-//}
-
 tasks.withType(Test) {
     useJUnitPlatform()
     systemProperties(System.getProperties())
 
-    //этим мы расширяем логирование и при запуске теста в консоль
-    //будет выводиться больше данных
     testLogging {
         lifecycle {
             events "started", "skipped", "failed", "standard_error", "standard_out"
@@ -49,9 +42,8 @@ tasks.withType(Test) {
         }
     }
 }
-    task jenkins_test(type: Test) {
+    task alfa_test(type: Test) {
         useJUnitPlatform {
-            includeTags("jenkins")
-            // только для класса с тегом demoqa (ну или метода если угодно, у нас класс)
+            includeTags("Alfa")
         }
     }

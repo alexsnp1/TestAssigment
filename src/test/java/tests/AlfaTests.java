@@ -1,8 +1,10 @@
 package tests;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.AlfaBankPage;
 
-public class SimpleTests extends TestBase {
+@Tag("Alfa")
+public class AlfaTests extends TestBase {
     AlfaBankPage alfaBankPage = new AlfaBankPage();
 
     @Test
