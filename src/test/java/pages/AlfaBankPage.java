@@ -101,8 +101,14 @@ public class AlfaBankPage {
     }
 
     public AlfaBankPage clickToEnglishLanguageOfSite() {
-        $("[href='https://alfabank.ru/en/']").should(Condition.appear, Duration.ofSeconds(10)).shouldBe(visible,
-                Duration.ofSeconds(10)).scrollTo().click();
+        SelenideElement englishButton = $("[href='https://alfabank.ru/en/']")
+                .should(Condition.appear, Duration.ofSeconds(10))
+                .shouldBe(visible, Duration.ofSeconds(10));
+        Selenide.executeJavaScript("arguments[0].scrollIntoView(true);", englishButton);
+        sleep(500);
+        Selenide.executeJavaScript("arguments[0].click();", englishButton);
+
         return this;
+
     }
 }
