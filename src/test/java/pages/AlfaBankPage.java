@@ -105,7 +105,7 @@ public class AlfaBankPage {
                 .should(Condition.appear, Duration.ofSeconds(10))
                 .shouldBe(visible, Duration.ofSeconds(10));
         Selenide.executeJavaScript("arguments[0].scrollIntoView(true);", englishButton);
-        sleep(500);
+//        sleep(500);
         Selenide.executeJavaScript("arguments[0].click();", englishButton);
 
         return this;
