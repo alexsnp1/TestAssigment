@@ -34,8 +34,13 @@ public class AlfaBankPage {
     }
 
     public AlfaBankPage openBusinessRegistrationPage() {
-        $("[data-test-id='mmb_tab']").find("a[href='/sme/start/']")
-                .scrollTo().shouldBe(visible).click();
+//        $("[data-test-id='mmb_tab']").find("a[href='/sme/start/']")
+//                .scrollTo().shouldBe(visible).click();
+        SelenideElement mmb_tab = $("[data-test-id='mmb_tab']").find("a[href='/sme/start/']")
+                .should(Condition.appear, Duration.ofSeconds(10))
+                .shouldBe(visible, Duration.ofSeconds(10));
+        Selenide.executeJavaScript("arguments[0].scrollIntoView(true);", mmb_tab);
+        Selenide.executeJavaScript("arguments[0].click();", mmb_tab);
         return this;
 
     }
@@ -105,9 +110,7 @@ public class AlfaBankPage {
                 .should(Condition.appear, Duration.ofSeconds(10))
                 .shouldBe(visible, Duration.ofSeconds(10));
         Selenide.executeJavaScript("arguments[0].scrollIntoView(true);", englishButton);
-//        sleep(500);
         Selenide.executeJavaScript("arguments[0].click();", englishButton);
-
         return this;
 
     }
