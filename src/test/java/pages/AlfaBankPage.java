@@ -62,7 +62,12 @@ public class AlfaBankPage {
     }
 
     public AlfaBankPage checkIfAmountValueCorrect() {
-        $("[data-test-id='amount-input']").should(Condition.appear).shouldBe(visible).shouldHave(value("300 000"));
+//        $("[data-test-id='amount-input']").should(Condition.appear).shouldBe(visible).shouldHave(value("300 000"));
+        SelenideElement AmountValue = $("[data-test-id='amount-input']")
+                .should(Condition.appear, Duration.ofSeconds(5))
+                .shouldBe(visible, Duration.ofSeconds(5));
+        Selenide.executeJavaScript("arguments[0].scrollIntoView(true);", AmountValue);
+        AmountValue.shouldHave(value("300 000"));
         return this;
     }
 
