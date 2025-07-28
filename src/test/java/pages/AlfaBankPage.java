@@ -73,7 +73,11 @@ public class AlfaBankPage {
     }
 
     public AlfaBankPage disableNewMoneyConditionCheckbox() {
-        $("#calculator .switch__switch_agi88").click();
+        SelenideElement newMoneyCheckbox = $("#calculator .switch__switch_agi88")
+                .should(Condition.appear, Duration.ofSeconds(5))
+                .shouldBe(visible, Duration.ofSeconds(5));
+        Selenide.executeJavaScript("arguments[0].scrollIntoView(true);", newMoneyCheckbox);
+        Selenide.executeJavaScript("arguments[0].click();", newMoneyCheckbox);
         return this;
     }
 
