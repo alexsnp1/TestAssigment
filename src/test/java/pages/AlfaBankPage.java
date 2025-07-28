@@ -72,16 +72,12 @@ public class AlfaBankPage {
     }
 
     public AlfaBankPage set3MonthsDepositTerm() {
-        Selenide.executeJavaScript("arguments[0].click();",
-                $$("button").findBy(Condition.text("3 месяца")));
+//        Selenide.executeJavaScript("arguments[0].click();",
+        $$("button").findBy(Condition.text("6 месяцев")).click();
         return this;
     }
 
     public AlfaBankPage disableNewMoneyConditionCheckbox() {
-//        SelenideElement newMoneyCheckbox = $("#calculator .switch__switch_agi88")
-//                .should(Condition.appear, Duration.ofSeconds(5))
-//                .shouldBe(visible, Duration.ofSeconds(5));
-//        Selenide.executeJavaScript("arguments[0].scrollIntoView(true);", newMoneyCheckbox);
         $("#calculator .switch__switch_agi88").click();
         return this;
     }
