@@ -102,7 +102,7 @@ public class AlfaBankPage {
 
     public AlfaBankPage clickToEnglishLanguageOfSite() {
         $("[href='https://alfabank.ru/en/']").should(Condition.appear, Duration.ofSeconds(10)).shouldBe(visible,
-                Duration.ofSeconds(10)).click();
+                Duration.ofSeconds(10)).scrollTo().click();
         return this;
     }
 }

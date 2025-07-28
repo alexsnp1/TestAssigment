@@ -5,12 +5,10 @@ import pages.AlfaBankPage;
 
 import static io.qameta.allure.Allure.step;
 
-@Tag("Alfa")
 public class AlfaTests extends TestBase {
     AlfaBankPage alfaBankPage = new AlfaBankPage();
 
     @Test
-    @Tag("Alfa")
     void shouldOpenBusinessRegistrationTab() {
         step("Open page", () -> {
             alfaBankPage.openPage();
@@ -92,6 +90,7 @@ public class AlfaTests extends TestBase {
         });
     }
     @Test
+    @Tag("Alfa")
     void shouldOpenEnglishVersion () {
         step("Open page", () -> {
         alfaBankPage.openPage();
