@@ -9,7 +9,6 @@ public class AlfaTests extends TestBase {
     AlfaBankPage alfaBankPage = new AlfaBankPage();
 
     @Test
-    @Tag("Alfa")
     void shouldOpenBusinessRegistrationTab() {
         step("Open page", () -> {
             alfaBankPage.openPage();
@@ -45,6 +44,7 @@ public class AlfaTests extends TestBase {
     }
 
     @Test
+    @Tag("Alfa")
     void shouldNavigateToDepositOpeningPageAfterCalculation() {
 
         step("Open page", () -> {
