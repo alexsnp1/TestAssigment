@@ -77,7 +77,7 @@ public class AlfaBankPage {
                 .should(Condition.appear, Duration.ofSeconds(5))
                 .shouldBe(visible, Duration.ofSeconds(5));
         Selenide.executeJavaScript("arguments[0].scrollIntoView(true);", newMoneyCheckbox);
-        Selenide.executeJavaScript("arguments[0].click();", newMoneyCheckbox);
+        newMoneyCheckbox.click();
         return this;
     }
 
