@@ -87,7 +87,7 @@ public class AlfaBankPage {
     }
 
     public AlfaBankPage clickToOpenDepositButton() {
-        $("[data-test-id='openDepositBtn-rub']").click();
+        $("[data-test-id='openDepositBtn-rub']").shouldBe(visible, Duration.ofSeconds(5)).click();
         return this;
     }
 
