@@ -21,24 +21,22 @@ public class AlfaBankPage {
     public AlfaBankPage checkTextResults(String textResult) {
         $$("[data-test-id='text']")
                 .findBy(Condition.text(textResult)).should(Condition.appear, Duration.ofSeconds(10)).shouldBe(visible,
-                        Duration.ofSeconds(10));
+                        Duration.ofSeconds(5));
         return this;
 
     }
 
     public AlfaBankPage selectSmallBusinessTab() {
         $("[data-test-id='TabsHeader-mmb-title']").scrollTo().should(Condition.appear)
-                .shouldBe(visible, Duration.ofSeconds(10)).click();
+                .shouldBe(visible, Duration.ofSeconds(5)).click();
         return this;
 
     }
 
     public AlfaBankPage openBusinessRegistrationPage() {
-//        $("[data-test-id='mmb_tab']").find("a[href='/sme/start/']")
-//                .scrollTo().shouldBe(visible).click();
         SelenideElement mmb_tab = $("[data-test-id='mmb_tab']").find("a[href='/sme/start/']")
-                .should(Condition.appear, Duration.ofSeconds(10))
-                .shouldBe(visible, Duration.ofSeconds(10));
+                .should(Condition.appear, Duration.ofSeconds(5))
+                .shouldBe(visible, Duration.ofSeconds(5));
         Selenide.executeJavaScript("arguments[0].scrollIntoView(true);", mmb_tab);
         Selenide.executeJavaScript("arguments[0].click();", mmb_tab);
         return this;
@@ -78,12 +76,16 @@ public class AlfaBankPage {
     }
 
     public AlfaBankPage disableNewMoneyConditionCheckbox() {
-        $("#calculator .switch__switch_agi88").click();
+        SelenideElement newMoneyCheckBox = $(("#calculator .switch__switch_agi88"))
+                .should(Condition.appear, Duration.ofSeconds(5))
+                .shouldBe(visible, Duration.ofSeconds(5));
+        Selenide.executeJavaScript("arguments[0].scrollIntoView(true);", newMoneyCheckBox);
+        Selenide.executeJavaScript("arguments[0].click();", newMoneyCheckBox);
         return this;
     }
 
     public AlfaBankPage checkIfInterestRateCorrect() {
-        $("[data-test-id='interestRate-all']").shouldHave(text("14,50%"));
+        $("[data-test-id='interestRate-all']").shouldHave(text("13,70%"));
         return this;
     }
 
@@ -94,7 +96,7 @@ public class AlfaBankPage {
 
     public AlfaBankPage hoverToSmallBusinessAndIE() {
         $("[data-test-id='test-sme']").shouldBe(visible,
-                Duration.ofSeconds(10)).hover();
+                Duration.ofSeconds(5)).hover();
         return this;
     }
 
@@ -112,8 +114,8 @@ public class AlfaBankPage {
 
     public AlfaBankPage clickToEnglishLanguageOfSite() {
         SelenideElement englishButton = $("[href='https://alfabank.ru/en/']")
-                .should(Condition.appear, Duration.ofSeconds(10))
-                .shouldBe(visible, Duration.ofSeconds(10));
+                .should(Condition.appear, Duration.ofSeconds(5))
+                .shouldBe(visible, Duration.ofSeconds(5));
         Selenide.executeJavaScript("arguments[0].scrollIntoView(true);", englishButton);
         Selenide.executeJavaScript("arguments[0].click();", englishButton);
         return this;
