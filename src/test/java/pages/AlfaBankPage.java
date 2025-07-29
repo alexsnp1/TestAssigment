@@ -3,6 +3,7 @@ package pages;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 
 import java.time.Duration;
@@ -20,7 +21,7 @@ public class AlfaBankPage {
 
     public AlfaBankPage checkTextResults(String textResult) {
         $$("[data-test-id='text']")
-                .findBy(Condition.text(textResult)).should(Condition.appear, Duration.ofSeconds(10)).shouldBe(visible,
+                .findBy(Condition.text(textResult)).should(Condition.appear, Duration.ofSeconds(5)).shouldBe(visible,
                         Duration.ofSeconds(5));
         return this;
 
@@ -69,8 +70,6 @@ public class AlfaBankPage {
     }
 
     public AlfaBankPage set6MonthsDepositTerm() {
-//        Selenide.executeJavaScript("arguments[0].click();",
-//        $$("button").findBy(Condition.text("6 месяцев")).click();
         SelenideElement Months6Button = $$("button").findBy(Condition.text("6 месяцев"))
                 .should(Condition.appear, Duration.ofSeconds(5))
                 .shouldBe(visible, Duration.ofSeconds(5));
@@ -123,6 +122,5 @@ public class AlfaBankPage {
         Selenide.executeJavaScript("arguments[0].scrollIntoView(true);", englishButton);
         Selenide.executeJavaScript("arguments[0].click();", englishButton);
         return this;
-
     }
 }
