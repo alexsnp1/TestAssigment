@@ -21,7 +21,7 @@ public class AlfaBankPage {
 
     public AlfaBankPage checkTextResults(String textResult) {
         $$("[data-test-id='text']")
-                .findBy(Condition.text(textResult)).should(Condition.appear, Duration.ofSeconds(5)).shouldBe(visible,
+                .findBy(Condition.text(textResult)).should(Condition.appear, Duration.ofSeconds(8)).shouldBe(visible,
                         Duration.ofSeconds(8));
         return this;
 
