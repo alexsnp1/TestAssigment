@@ -54,7 +54,7 @@ public class AlfaTests extends TestBase {
         alfaBankPage.checkIfAmountValueCorrect();
         });
         step("Set 3 Months Deposit Term", () -> {
-            alfaBankPage.set3MonthsDepositTerm();
+            alfaBankPage.set6MonthsDepositTerm();
         });
         step("Disable New Money Condition Checkbox", () -> {
             alfaBankPage.disableNewMoneyConditionCheckbox();

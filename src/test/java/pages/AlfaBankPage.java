@@ -60,7 +60,6 @@ public class AlfaBankPage {
     }
 
     public AlfaBankPage checkIfAmountValueCorrect() {
-//        $("[data-test-id='amount-input']").should(Condition.appear).shouldBe(visible).shouldHave(value("300 000"));
         SelenideElement AmountValue = $("[data-test-id='amount-input']")
                 .should(Condition.appear, Duration.ofSeconds(5))
                 .shouldBe(visible, Duration.ofSeconds(5));
@@ -69,9 +68,14 @@ public class AlfaBankPage {
         return this;
     }
 
-    public AlfaBankPage set3MonthsDepositTerm() {
+    public AlfaBankPage set6MonthsDepositTerm() {
 //        Selenide.executeJavaScript("arguments[0].click();",
-        $$("button").findBy(Condition.text("6 месяцев")).click();
+//        $$("button").findBy(Condition.text("6 месяцев")).click();
+        SelenideElement Months6Button = $$("button").findBy(Condition.text("6 месяцев"))
+                .should(Condition.appear, Duration.ofSeconds(5))
+                .shouldBe(visible, Duration.ofSeconds(5));
+        Selenide.executeJavaScript("arguments[0].scrollIntoView(true);", Months6Button);
+        Selenide.executeJavaScript("arguments[0].click();", Months6Button);
         return this;
     }
 
