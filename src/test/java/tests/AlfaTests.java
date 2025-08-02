@@ -130,7 +130,7 @@ public class AlfaTests extends TestBase {
         step("Open page", () -> {
             alfaBankPage.openPage();
         });
-        step("Check Text Results", () -> {
+        step("Check To Become A Client Button", () -> {
             alfaBankPage.checkToBecomeAClientButton();
         });
     }
@@ -141,8 +141,18 @@ public class AlfaTests extends TestBase {
         step("Open page", () -> {
             alfaBankPage.openPage();
         });
-        step("Check Text Results", () -> {
+        step("Check Login Button", () -> {
             alfaBankPage.checkLoginButton();
+        });
+    }
+    @Test
+    @Tag("Alfa")
+    void shouldCheckRetailDropdown() {
+        step("Open page", () -> {
+            alfaBankPage.openPage();
+        });
+        step("Check Retail Dropdown", () -> {
+            alfaBankPage.checkRetailDropdown();
         });
     }
 }

@@ -138,4 +138,9 @@ public class AlfaBankPage {
                 .shouldBe(visible);
         return this;
     }
+    public AlfaBankPage checkRetailDropdown() {
+        $("[data-test-id='test-retail']")
+                .shouldHave(Condition.text("Частным лицам")).shouldBe(visible);
+        return this;
+    }
 }
