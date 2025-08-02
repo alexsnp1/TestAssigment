@@ -36,62 +36,63 @@ ____
 <a href="https://gradle.org/"><img src="images/logo/Gradle.svg" width="50" height="50"  alt="Gradle"/></a>  
 <a href="https://selenide.org/"><img src="images/logo/Selenide.svg" width="50" height="50"  alt="Selenide"/></a>  
 <a href="https://aerokube.com/selenoid/"><img src="images/logo/Selenoid.svg" width="50" height="50"  alt="Selenoid"/></a>  
-<a href="ht[images](images)tps://github.com/allure-framework/allure2"><img src="images/logo/Allure.svg" width="50" height="50"  alt="Allure"/></a> 
+<a href="ht[images](images)tps://github.com/allure-framework/allure2"><img src="images/logo/Allure_Report.svg" width="50" height="50"  alt="Allure"/></a> 
 <a href="https://qameta.io/"><img src="images/logo/Allure2.svg" width="50" height="50"  alt="Allure TestOps"/></a>   
 <a href="https://www.jenkins.io/"><img src="images/logo/Jenkins.svg" width="50" height="50"  alt="Jenkins"/></a>  
 <a href="https://www.atlassian.com/ru/software/jira/"><img src="images/logo/Jira.svg" width="50" height="50"  alt="Jira"/></a>  
+<a href="https://www.telegram.org"><img src="images/logo/Telegram.svg" width="50" height="50"  alt="Telegram"/></a> 
 </p>
 
 ____
 <a id="cases"></a>
 ## <a name="Примеры автоматизированных тест-кейсов">**Примеры автоматизированных тест-кейсов:**</a>
 ____
-- ✓ *Проверка работы поиска*
-- ✓ *По клику на 'EN' сайт переходит на английский*
-- ✓ *Проверка, что в разделе 'Карьера' есть описание миссии компании*
-- ✓ *Доступность раздела 'Новости' из вкладки 'Покупателю'*
-- ✓ *Проверка формы 'Обратная связь'*
-- ✓ *Проверка формы подписки на рассылку новостей*
-- ✓ *Поиск несуществующей строки в разделе 'Компания'*
+
+- ✓ *Проверка англоязычной версии сайта*
+- ✓ *Проверка работы поиска и логики ответа*
+- ✓ *Проверка расчетов калькулятора вклада*
+- ✓ *Проверка раскрытия меню при наведении*
+- ✓ *Проверка переключения кнопок в главном меню*
+- ✓ *Проверка логотипа компании на главной странице*
+- ✓ *Проверка отображения баннера на главной странице*
+- ✓ *Проверка открытия вкладки "Открытие расчетного счета"*
 
 
 ____
 <a id="jenkins"></a>
-## <img alt="Jenkins" height="25" src="images/logo/Jenkins.svg" width="25"/></a><a name="Сборка"></a>Сборка в [Jenkins](https://jenkins.autotests.cloud/job/Kod3ik_qa_guru_x5/)</a>
+## <img alt="Jenkins" height="25" src="images/logo/Jenkins.svg" width="25"/></a><a name="Сборка"></a>Сборка в [Jenkins](https://jenkins.autotests.cloud/job/student_alesnp_qa_guru_35_AlfaTest/)</a>
 ____
 <p align="center">  
-<a href="https://jenkins.autotests.cloud/job/Kod3ik_qa_guru_x5/"><img src="images/screen/jenkins_build.png" alt="Jenkins" width="950"/></a>  
+<a href="https://jenkins.autotests.cloud/job/student_alesnp_qa_guru_35_AlfaTest/"><img src="images/screen/jenkins_build.png" alt="Jenkins" width="950"/></a>  
 </p>
 
 
 ### **Параметры сборки в Jenkins:**
 
-- *browser (браузер, по умолчанию chrome)*
-- *browserVersion (версия браузера, по умолчанию 100.0)*
-- *browserSize (размер окна браузера, по умолчанию 1920x1080)*
-- *baseUrl (адрес тестируемого веб-сайта)*
-- *remoteUrl (логин, пароль и адрес удаленного сервера Selenoid)*
+- *selenoid_url (логин, пароль и адрес удаленного сервера Selenoid)*
+- *BROWSER (браузер, по умолчанию chrome)*
+- *BROWSER_VERSION (версия браузера, по умолчанию 128.0)*
+- *BROWSER_SIZE (размер окна браузера, по умолчанию 1600x900)*
 
 <a id="console"></a>
 ## Команды для запуска из терминала
 ___
 ***Локальный запуск:***
 ```bash  
-gradle clean X5Group_test
+gradle clean alfa_test
 ```
 
 ***Удалённый запуск через Jenkins:***
 ```bash  
-clean X5Group_test
-"-Dbrowser=${browser}"
-"-DbrowserVersion=${browserVersion}"
-"-DbrowserSize=${browserSize}"
-"-DbaseUrl=${baseUrl}"
-"-DremoteUrl=${remoteUrl}"
+clean alfa_test
+-Dselenoid_url=${selenoid_url}
+-Dbrowser=${BROWSER}
+-Dbrowser.version=${BROWSER_VERSION}
+-Dbrowser_size=${BROWSER_SIZE}
 ```
 ___
 <a id="allure"></a>
-## <img alt="Allure" height="25" src="images/logo/Allure.svg" width="25"/></a> <a name="Allure"></a>Allure [отчет](https://jenkins.autotests.cloud/job/Kod3ik_qa_guru_x5/allure/)</a>
+## <img alt="Allure_Report" height="25" src="images/logo/Allure_Report.svg" width="25"/></a> <a name="Allure_Report"></a>Allure [отчет](https://jenkins.autotests.cloud/job/Project%20student_alexsnp_qa_guru_AlfaTests/36/allure/)</a>
 ___
 
 ### *Основная страница отчёта*
