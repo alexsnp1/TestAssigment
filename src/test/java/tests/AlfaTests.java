@@ -102,4 +102,13 @@ public class AlfaTests extends TestBase {
         alfaBankPage.checkTextResults("The most phygital bank");
         });
     }
+    @Test
+    void shouldCheckLogo () {
+        step("Open page", () -> {
+            alfaBankPage.openPage();
+        });
+        step("Check that logo is visible", () -> {
+            alfaBankPage.checkLogo();
+        });
+    }
 }

@@ -123,4 +123,8 @@ public class AlfaBankPage {
         Selenide.executeJavaScript("arguments[0].click();", englishButton);
         return this;
     }
+    public AlfaBankPage checkLogo() {
+        $("[title='alfaIcon']").should(visible);
+        return this;
+    }
 }
