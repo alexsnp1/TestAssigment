@@ -50,7 +50,7 @@ public class AlfaTests extends TestBase {
             alfaBankPage.openPage();
         });
         step("Check If Amount Value is Correct", () -> {
-        alfaBankPage.checkIfAmountValueCorrect();
+            alfaBankPage.checkIfAmountValueCorrect();
         });
         step("Set 3 Months Deposit Term", () -> {
             alfaBankPage.set6MonthsDepositTerm();
@@ -59,50 +59,53 @@ public class AlfaTests extends TestBase {
             alfaBankPage.disableNewMoneyConditionCheckbox();
         });
         step("Check If Interest Rate is Correct", () -> {
-                alfaBankPage.checkIfInterestRateCorrect();
+            alfaBankPage.checkIfInterestRateCorrect();
         });
         step("Click To Open Deposit Button", () -> {
-                alfaBankPage.clickToOpenDepositButton();
+            alfaBankPage.clickToOpenDepositButton();
         });
         step("Check Text Results", () -> {
-                alfaBankPage.checkTextResults("Как открыть вклад");
+            alfaBankPage.checkTextResults("Как открыть вклад");
         });
     }
+
     @Test
-    void shouldNavigateToBusinessAccountOpeningThroughHover () {
+    void shouldNavigateToBusinessAccountOpeningThroughHover() {
         step("Open page", () -> {
-        alfaBankPage.openPage();
+            alfaBankPage.openPage();
         });
         step("Wait For Loading Site", () -> {
-        alfaBankPage.waitForLoadingSite();
+            alfaBankPage.waitForLoadingSite();
         });
         step("Hover To Small Business And IE(", () -> {
-        alfaBankPage.hoverToSmallBusinessAndIE();
+            alfaBankPage.hoverToSmallBusinessAndIE();
         });
         step("Hover To Business Account", () -> {
-        alfaBankPage.hoverToBusinessAccount();
+            alfaBankPage.hoverToBusinessAccount();
         });
         step("Click To Open Account Button", () -> {
-        alfaBankPage.clickToOpenAccountButton();
+            alfaBankPage.clickToOpenAccountButton();
         });
         step("Check Text Results", () -> {
-        alfaBankPage.checkTextResults("Заявка на открытие счёта для бизнеса");
+            alfaBankPage.checkTextResults("Заявка на открытие счёта для бизнеса");
         });
     }
+
     @Test
-    void shouldOpenEnglishVersion () {
+    void shouldOpenEnglishVersion() {
         step("Open page", () -> {
-        alfaBankPage.openPage();
+            alfaBankPage.openPage();
         });
         step("Click To English Language Of Site", () -> {
-        alfaBankPage.clickToEnglishLanguageOfSite();
+            alfaBankPage.clickToEnglishLanguageOfSite();
         });
         step("Check Text Results", () -> {
-        alfaBankPage.checkTextResults("The most phygital bank");
+            alfaBankPage.checkTextResults("The most phygital bank");
         });
     }
+
     @Test
-    void shouldCheckLogo () {
+    void shouldCheckLogo() {
         step("Open page", () -> {
             alfaBankPage.openPage();
         });
@@ -110,8 +113,9 @@ public class AlfaTests extends TestBase {
             alfaBankPage.checkLogo();
         });
     }
+
     @Test
-    void shouldCheckBanner () {
+    void shouldCheckBanner() {
         step("Open page", () -> {
             alfaBankPage.openPage();
         });
@@ -119,14 +123,26 @@ public class AlfaTests extends TestBase {
             alfaBankPage.checkTextResults("Бесплатная Альфа‑Карта");
         });
     }
+
     @Test
     @Tag("Alfa")
-    void shouldCheckToBecomeAClientButton () {
+    void shouldCheckToBecomeAClientButton() {
         step("Open page", () -> {
             alfaBankPage.openPage();
         });
         step("Check Text Results", () -> {
-            alfaBankPage. checkToBecomeAClientButton();
+            alfaBankPage.checkToBecomeAClientButton();
+        });
+    }
+
+    @Test
+    @Tag("Alfa")
+    void shouldCheckLoginButton() {
+        step("Open page", () -> {
+            alfaBankPage.openPage();
+        });
+        step("Check Text Results", () -> {
+            alfaBankPage.checkLoginButton();
         });
     }
 }

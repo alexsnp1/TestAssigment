@@ -133,4 +133,9 @@ public class AlfaBankPage {
                 .shouldBe(visible);
         return this;
     }
+    public AlfaBankPage checkLoginButton() {
+        $$("button").findBy(Condition.text("Войти"))
+                .shouldBe(visible);
+        return this;
+    }
 }
