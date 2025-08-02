@@ -129,7 +129,7 @@ public class AlfaBankPage {
         return this;
     }
     public AlfaBankPage checkToBecomeAClientButton() {
-        $(byTagAndText("button", "Стать клиентом" )).shouldBe(visible);
+        $(byTagAndText("a", "Стать клиентом" )).shouldBe(visible);
         return this;
     }
 }
