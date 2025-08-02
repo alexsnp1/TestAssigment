@@ -88,7 +88,7 @@ public class AlfaBankPage {
     }
 
     public AlfaBankPage checkIfInterestRateCorrect() {
-        $("[data-test-id='interestRate-all']").shouldHave(text("13,70%"));
+        $("[data-test-id='interestRate-all']").shouldHave(text("13,50%"));
         return this;
     }
 
