@@ -129,7 +129,8 @@ public class AlfaBankPage {
         return this;
     }
     public AlfaBankPage checkToBecomeAClientButton() {
-        $(byTagAndText("a", "Стать клиентом" )).shouldBe(visible);
+        $$("a").findBy(Condition.text("Стать клиентом"))
+                .shouldBe(visible);
         return this;
     }
 }
