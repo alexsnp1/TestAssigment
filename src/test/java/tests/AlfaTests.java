@@ -5,7 +5,6 @@ import pages.AlfaBankPage;
 
 import static io.qameta.allure.Allure.step;
 
-@Tag("Alfa")
 public class AlfaTests extends TestBase {
     AlfaBankPage alfaBankPage = new AlfaBankPage();
 
@@ -118,6 +117,16 @@ public class AlfaTests extends TestBase {
         });
         step("Check Text Results", () -> {
             alfaBankPage.checkTextResults("Бесплатная Альфа‑Карта");
+        });
+    }
+    @Test
+    @Tag("Alfa")
+    void shouldCheckToBecomeAClientButton () {
+        step("Open page", () -> {
+            alfaBankPage.openPage();
+        });
+        step("Check Text Results", () -> {
+            alfaBankPage. checkToBecomeAClientButton();
         });
     }
 }

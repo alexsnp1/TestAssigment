@@ -9,6 +9,7 @@ import org.openqa.selenium.Keys;
 import java.time.Duration;
 
 import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Selectors.byTagAndText;
 import static com.codeborne.selenide.Selenide.*;
 
 public class AlfaBankPage {
@@ -125,6 +126,10 @@ public class AlfaBankPage {
     }
     public AlfaBankPage checkLogo() {
         $("[title='alfaIcon']").should(visible);
+        return this;
+    }
+    public AlfaBankPage checkToBecomeAClientButton() {
+        $(byTagAndText("button", "Стать клиентом" )).shouldBe(visible);
         return this;
     }
 }
