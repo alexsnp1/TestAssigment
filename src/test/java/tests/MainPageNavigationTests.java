@@ -5,7 +5,8 @@ import pages.AlfaBankPage;
 
 import static io.qameta.allure.Allure.step;
 
-public class AlfaTests extends TestBase {
+@Tag("Alfa")
+public class MainPageNavigationTests extends TestBase {
     AlfaBankPage alfaBankPage = new AlfaBankPage();
 
     @Test
@@ -101,58 +102,6 @@ public class AlfaTests extends TestBase {
         });
         step("Check Text Results", () -> {
             alfaBankPage.checkTextResults("The most phygital bank");
-        });
-    }
-
-    @Test
-    void shouldCheckLogo() {
-        step("Open page", () -> {
-            alfaBankPage.openPage();
-        });
-        step("Check that logo is visible", () -> {
-            alfaBankPage.checkLogo();
-        });
-    }
-
-    @Test
-    void shouldCheckBanner() {
-        step("Open page", () -> {
-            alfaBankPage.openPage();
-        });
-        step("Check Text Results", () -> {
-            alfaBankPage.checkTextResults("Бесплатная Альфа‑Карта");
-        });
-    }
-
-    @Test
-    @Tag("Alfa")
-    void shouldCheckToBecomeAClientButton() {
-        step("Open page", () -> {
-            alfaBankPage.openPage();
-        });
-        step("Check To Become A Client Button", () -> {
-            alfaBankPage.checkToBecomeAClientButton();
-        });
-    }
-
-    @Test
-    @Tag("Alfa")
-    void shouldCheckLoginButton() {
-        step("Open page", () -> {
-            alfaBankPage.openPage();
-        });
-        step("Check Login Button", () -> {
-            alfaBankPage.checkLoginButton();
-        });
-    }
-    @Test
-    @Tag("Alfa")
-    void shouldCheckRetailDropdown() {
-        step("Open page", () -> {
-            alfaBankPage.openPage();
-        });
-        step("Check Retail Dropdown", () -> {
-            alfaBankPage.checkRetailDropdown();
         });
     }
 }
