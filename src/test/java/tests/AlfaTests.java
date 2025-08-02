@@ -111,4 +111,13 @@ public class AlfaTests extends TestBase {
             alfaBankPage.checkLogo();
         });
     }
+    @Test
+    void shouldCheckBanner () {
+        step("Open page", () -> {
+            alfaBankPage.openPage();
+        });
+        step("Check Text Results", () -> {
+            alfaBankPage.checkTextResults("Бесплатная Альфа‑Карта");
+        });
+    }
 }
