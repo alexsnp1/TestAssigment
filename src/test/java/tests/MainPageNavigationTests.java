@@ -5,7 +5,7 @@ import pages.AlfaBankPage;
 
 import static io.qameta.allure.Allure.step;
 
-@Tag("Alfa")
+//@Tag("Alfa")
 public class MainPageNavigationTests extends TestBase {
     AlfaBankPage alfaBankPage = new AlfaBankPage();
 
@@ -45,6 +45,7 @@ public class MainPageNavigationTests extends TestBase {
     }
 
     @Test
+    @Tag("Alfa")
     void shouldNavigateToDepositOpeningPageAfterCalculation() {
 
         step("Open page", () -> {

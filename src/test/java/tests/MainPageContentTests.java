@@ -6,7 +6,7 @@ import pages.AlfaBankPage;
 
 import static io.qameta.allure.Allure.step;
 
-@Tag("Alfa")
+//@Tag("Alfa")
 public class MainPageContentTests extends TestBase {
     AlfaBankPage alfaBankPage = new AlfaBankPage();
 
