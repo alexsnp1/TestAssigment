@@ -60,10 +60,10 @@ ____
 
 ____
 <a id="jenkins"></a>
-## <img alt="Jenkins" height="25" src="images/logo/Jenkins.svg" width="25"/></a><a name="Сборка"></a>Сборка в [Jenkins](https://jenkins.autotests.cloud/job/student_alesnp_qa_guru_35_AlfaTest/)</a>
+## <img alt="Jenkins" height="25" src="images/logo/Jenkins.svg" width="25"/></a><a name="Сборка"></a>Сборка в [Jenkins](https://jenkins.autotests.cloud/job/Project%20student_alexsnp_qa_guru_AlfaTests/)</a>
 ____
 <p align="center">  
-<a href="https://jenkins.autotests.cloud/job/student_alesnp_qa_guru_35_AlfaTest/"><img src="images/screen/jenkins_build.png" alt="Jenkins" width="950"/></a>  
+<a href="https://jenkins.autotests.cloud/job/Project%20student_alexsnp_qa_guru_AlfaTests/"><img src="images/screen/jenkins_build.png" alt="Jenkins" width="950"/></a>  
 </p>
 
 
