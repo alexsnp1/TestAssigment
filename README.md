@@ -155,7 +155,7 @@ ____
 <a id="video"></a>
 ## <img alt="Selenoid" height="25" src="images/logo/Selenoid.svg" width="25"/></a> Примеры видео выполнения тестов на Selenoid
 ____
-<p align="center">
-<img title="Selenoid Video" src="images/video/x5.gif" width="550" height="350"  alt="video">   
+<p align="center"> 
+<img title="Selenoid Video" src="images/video/alfa.gif" width="550" height="350"  alt="video">  
 </p>
 
