@@ -11,7 +11,7 @@ public class BusinessAccountOpeningPage extends TestBase {
     AlfaBankPage alfaBankPage = new AlfaBankPage();
 
     @Test
-    void shouldNavigateToBusinessAccountOpeningThroughHover() {
+    void shouldNavigateToBusinessAccountOpeningThroughHoverTest() {
         step("Open page", () -> {
             alfaBankPage.openPage();
         });

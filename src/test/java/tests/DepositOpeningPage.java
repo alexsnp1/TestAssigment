@@ -11,7 +11,7 @@ public class DepositOpeningPage extends TestBase{
     AlfaBankPage alfaBankPage = new AlfaBankPage();
 
     @Test
-    void shouldNavigateToDepositOpeningPageAfterCalculation() {
+    void shouldNavigateToDepositOpeningPageAfterCalculationTest() {
 
         step("Open page", () -> {
             alfaBankPage.openPage();

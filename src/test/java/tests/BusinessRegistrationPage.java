@@ -10,7 +10,7 @@ public class BusinessRegistrationPage extends TestBase{
         AlfaBankPage alfaBankPage = new AlfaBankPage();
 
         @Test
-        void shouldOpenBusinessRegistrationTab() {
+        void shouldOpenBusinessRegistrationTabTest() {
             step("Open page", () -> {
                 alfaBankPage.openPage();
             });

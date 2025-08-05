@@ -11,7 +11,7 @@ public class MainPageContentTests extends TestBase {
     AlfaBankPage alfaBankPage = new AlfaBankPage();
 
     @Test
-    void shouldCheckLogo() {
+    void shouldCheckLogoTest() {
         step("Open page", () -> {
             alfaBankPage.openPage();
         });
@@ -21,7 +21,7 @@ public class MainPageContentTests extends TestBase {
     }
 
     @Test
-    void shouldCheckBanner() {
+    void shouldCheckBannerTest() {
         step("Open page", () -> {
             alfaBankPage.openPage();
         });
@@ -31,7 +31,7 @@ public class MainPageContentTests extends TestBase {
     }
 
     @Test
-    void shouldCheckToBecomeAClientButton() {
+    void shouldCheckToBecomeAClientButtonTest() {
         step("Open page", () -> {
             alfaBankPage.openPage();
         });
@@ -41,7 +41,7 @@ public class MainPageContentTests extends TestBase {
     }
 
     @Test
-    void shouldCheckLoginButton() {
+    void shouldCheckLoginButtonTest() {
         step("Open page", () -> {
             alfaBankPage.openPage();
         });
@@ -50,7 +50,7 @@ public class MainPageContentTests extends TestBase {
         });
     }
     @Test
-    void shouldCheckRetailDropdown() {
+    void shouldCheckRetailDropdownTest() {
         step("Open page", () -> {
             alfaBankPage.openPage();
         });
@@ -59,7 +59,7 @@ public class MainPageContentTests extends TestBase {
         });
     }
     @Test
-    void shouldSearchForDebitCardAndSeeResults() {
+    void shouldSearchForDebitCardAndSeeResultsTest() {
         step("Open page", () -> {
             alfaBankPage.openPage();
         });

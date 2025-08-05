@@ -11,7 +11,7 @@ public class EnglishVersionPage extends TestBase{
     AlfaBankPage alfaBankPage = new AlfaBankPage();
 
     @Test
-    void shouldOpenEnglishVersion() {
+    void shouldOpenEnglishVersionTest() {
         step("Open page", () -> {
             alfaBankPage.openPage();
         });
