@@ -11,17 +11,10 @@ public class BusinessRegistrationPage extends TestBase{
 
         @Test
         void shouldOpenBusinessRegistrationTabTest() {
-            step("Open page", () -> {
-                alfaBankPage.openPage();
-            });
-            step("Select Small Business Tab", () -> {
-                alfaBankPage.selectSmallBusinessTab();
-            });
-            step("Open Business Registration Page", () -> {
-                alfaBankPage.openBusinessRegistrationPage();
-            });
-            step("Check Text Results", () -> {
-                alfaBankPage.checkTextResults("Регистрация бизнеса онлайн");
-            });
+                alfaBankPage
+                        .openPage()
+                        .selectSmallBusinessTab()
+                        .openBusinessRegistrationPage()
+                        .checkTextResults("Регистрация бизнеса онлайн");
         }
     }

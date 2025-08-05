@@ -12,68 +12,44 @@ public class MainPageContentTests extends TestBase {
 
     @Test
     void shouldCheckLogoTest() {
-        step("Open page", () -> {
-            alfaBankPage.openPage();
-        });
-        step("Check that logo is visible", () -> {
-            alfaBankPage.checkLogo();
-        });
+            alfaBankPage
+                    .openPage()
+                    .checkLogo();
     }
 
     @Test
     void shouldCheckBannerTest() {
-        step("Open page", () -> {
-            alfaBankPage.openPage();
-        });
-        step("Check Text Results", () -> {
-            alfaBankPage.checkTextResults("Бесплатная Альфа‑Карта");
-        });
+            alfaBankPage
+                    .openPage()
+                    .checkTextResults("Бесплатная Альфа‑Карта");
     }
 
     @Test
     void shouldCheckToBecomeAClientButtonTest() {
-        step("Open page", () -> {
-            alfaBankPage.openPage();
-        });
-        step("Check To Become A Client Button", () -> {
-            alfaBankPage.checkToBecomeAClientButton();
-        });
+            alfaBankPage
+                    .openPage()
+                    .checkToBecomeAClientButton();
     }
 
     @Test
     void shouldCheckLoginButtonTest() {
-        step("Open page", () -> {
-            alfaBankPage.openPage();
-        });
-        step("Check Login Button", () -> {
-            alfaBankPage.checkLoginButton();
-        });
+            alfaBankPage
+                    .openPage()
+                    .checkLoginButton();
     }
     @Test
     void shouldCheckRetailDropdownTest() {
-        step("Open page", () -> {
-            alfaBankPage.openPage();
-        });
-        step("Check Retail Dropdown", () -> {
-            alfaBankPage.checkRetailDropdown();
-        });
+            alfaBankPage
+                    .openPage()
+                    .checkRetailDropdown();
     }
     @Test
     void shouldSearchForDebitCardAndSeeResultsTest() {
-        step("Open page", () -> {
-            alfaBankPage.openPage();
-        });
-        step("Wait For Loading Site", () -> {
-            alfaBankPage.waitForLoadingSite();
-        });
-        step("Open Search Bar", () -> {
-            alfaBankPage.openSearchBar();
-        });
-        step("Set Value To Search Bar", () -> {
-            alfaBankPage.setValueToSearchBar();
-        });
-        step("Check Text Results", () -> {
-            alfaBankPage.checkTextResults("Дебетовая карта");
-        });
+            alfaBankPage
+                    .openPage()
+                    .waitForLoadingSite()
+                    .openSearchBar()
+                    .setValueToSearchBar()
+                    .checkTextResults("Дебетовая карта");
     }
 }

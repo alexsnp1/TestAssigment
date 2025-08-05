@@ -13,26 +13,13 @@ public class DepositOpeningPage extends TestBase{
     @Test
     void shouldNavigateToDepositOpeningPageAfterCalculationTest() {
 
-        step("Open page", () -> {
-            alfaBankPage.openPage();
-        });
-        step("Check If Amount Value is Correct", () -> {
-            alfaBankPage.checkIfAmountValueCorrect();
-        });
-        step("Set 3 Months Deposit Term", () -> {
-            alfaBankPage.set6MonthsDepositTerm();
-        });
-        step("Disable New Money Condition Checkbox", () -> {
-            alfaBankPage.disableNewMoneyConditionCheckbox();
-        });
-        step("Check If Interest Rate is Correct", () -> {
-            alfaBankPage.checkIfInterestRateCorrect();
-        });
-        step("Click To Open Deposit Button", () -> {
-            alfaBankPage.clickToOpenDepositButton();
-        });
-        step("Check Text Results", () -> {
-            alfaBankPage.checkTextResults("Как открыть вклад");
-        });
+            alfaBankPage
+                    .openPage()
+                    .checkIfAmountValueCorrect()
+                    .set6MonthsDepositTerm()
+                    .disableNewMoneyConditionCheckbox()
+                    .checkIfInterestRateCorrect()
+                    .clickToOpenDepositButton()
+                    .checkTextResults("Как открыть вклад");
     }
 }

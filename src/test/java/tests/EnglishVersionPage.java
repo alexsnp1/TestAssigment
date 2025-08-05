@@ -12,14 +12,9 @@ public class EnglishVersionPage extends TestBase{
 
     @Test
     void shouldOpenEnglishVersionTest() {
-        step("Open page", () -> {
-            alfaBankPage.openPage();
-        });
-        step("Click To English Language Of Site", () -> {
-            alfaBankPage.clickToEnglishLanguageOfSite();
-        });
-        step("Check Text Results", () -> {
-            alfaBankPage.checkTextResults("The most phygital bank");
-        });
+            alfaBankPage
+                    .openPage()
+                    .clickToEnglishLanguageOfSite()
+                    .checkTextResults("The most phygital bank");
     }
 }
