@@ -6,6 +6,7 @@ import helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.util.Map;
@@ -21,7 +22,7 @@ public class TestBase {
         Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.browserVersion = System.getProperty("browser.version", "128.0");
         Configuration.browserSize = System.getProperty("browser_size", "1600x900");
-        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+//        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
@@ -31,11 +32,18 @@ public class TestBase {
         Configuration.browserCapabilities = capabilities;
     }
 
+    @BeforeEach
+    void beforeEach()  {
+        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+    }
+
     @AfterEach
     void addAttachments() {
         Attach.screenshotAs("Last Screenshot");
         Attach.pageSource();
         Attach.browserConsoleLogs();;
         Attach.addVideo();
+
+        SelenideLogger.removeListener("AllureSelenide");
     }
 }
