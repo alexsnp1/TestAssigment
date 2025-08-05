@@ -58,4 +58,22 @@ public class MainPageContentTests extends TestBase {
             alfaBankPage.checkRetailDropdown();
         });
     }
+    @Test
+    void shouldSearchForDebitCardAndSeeResults() {
+        step("Open page", () -> {
+            alfaBankPage.openPage();
+        });
+        step("Wait For Loading Site", () -> {
+            alfaBankPage.waitForLoadingSite();
+        });
+        step("Open Search Bar", () -> {
+            alfaBankPage.openSearchBar();
+        });
+        step("Set Value To Search Bar", () -> {
+            alfaBankPage.setValueToSearchBar();
+        });
+        step("Check Text Results", () -> {
+            alfaBankPage.checkTextResults("Дебетовая карта");
+        });
+    }
 }
