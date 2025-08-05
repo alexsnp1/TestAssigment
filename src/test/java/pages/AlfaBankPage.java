@@ -29,8 +29,13 @@ public class AlfaBankPage {
     }
 
     public AlfaBankPage selectSmallBusinessTab() {
-        $("[data-test-id='TabsHeader-mmb-title']").scrollTo().should(Condition.appear)
-                .shouldBe(visible, Duration.ofSeconds(5)).click();
+//        $("[data-test-id='TabsHeader-mmb-title']").scrollTo().should(Condition.appear)
+//                .shouldBe(visible, Duration.ofSeconds(5)).click();
+        SelenideElement TabsHeader = $("[data-test-id='TabsHeader-mmb-title']")
+                .should(Condition.appear, Duration.ofSeconds(5))
+                .shouldBe(visible, Duration.ofSeconds(5));
+        Selenide.executeJavaScript("arguments[0].scrollIntoView(true);", TabsHeader);
+        Selenide.executeJavaScript("arguments[0].click();", TabsHeader);
         return this;
 
     }
