@@ -92,7 +92,7 @@ clean alfa_test
 ```
 ___
 <a id="allure"></a>
-## <img alt="Allure_Report" height="25" src="images/logo/Allure_Report.svg" width="25"/></a> <a name="Allure_Report"></a>Allure [отчет](https://jenkins.autotests.cloud/job/Project%20student_alexsnp_qa_guru_AlfaTests/36/allure/)</a>
+## <img alt="Allure_Report" height="25" src="images/logo/Allure_Report.svg" width="25"/></a> <a name="Allure_Report"></a>Allure [отчет](https://jenkins.autotests.cloud/job/Project%20student_alexsnp_qa_guru_AlfaTests/45/allure/)</a>
 ___
 
 ### *Основная страница отчёта*
