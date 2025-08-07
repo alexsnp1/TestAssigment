@@ -2,15 +2,15 @@ package tests;
 
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import pages.AlfaBankPage;
+import pages.BusinessRegistrationPage;
 
 @Tag("Alfa")
-public class BusinessRegistrationPage extends TestBase{
-        AlfaBankPage alfaBankPage = new AlfaBankPage();
+public class BusinessRegistrationTests extends TestBase{
+        BusinessRegistrationPage businessRegistrationPage = new BusinessRegistrationPage();
 
         @Test
         void shouldOpenBusinessRegistrationTabTest() {
-                alfaBankPage
+                businessRegistrationPage
                         .openPage()
                         .selectSmallBusinessTab()
                         .openBusinessRegistrationPage()

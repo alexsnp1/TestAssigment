@@ -2,15 +2,15 @@ package tests;
 
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import pages.AlfaBankPage;
+import pages.BusinessAccountOpeningPage;
 
 @Tag("Alfa")
-public class BusinessAccountOpeningPage extends TestBase {
-    AlfaBankPage alfaBankPage = new AlfaBankPage();
+public class BusinessAccountOpeningTests extends TestBase {
+    BusinessAccountOpeningPage businessAccountOpeningPage = new BusinessAccountOpeningPage();
 
     @Test
     void shouldNavigateToBusinessAccountOpeningThroughHoverTest() {
-            alfaBankPage
+        businessAccountOpeningPage
                     .openPage()
                     .waitForLoadingSite()
                     .hoverToSmallBusinessAndIE()

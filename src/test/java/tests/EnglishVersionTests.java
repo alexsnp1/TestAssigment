@@ -2,15 +2,15 @@ package tests;
 
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import pages.AlfaBankPage;
+import pages.EnglishVersionPage;
 
 @Tag("Alfa")
-public class EnglishVersionPage extends TestBase{
-    AlfaBankPage alfaBankPage = new AlfaBankPage();
+public class EnglishVersionTests extends TestBase{
+    EnglishVersionPage englishVersionPage = new EnglishVersionPage();
 
     @Test
     void shouldOpenEnglishVersionTest() {
-            alfaBankPage
+        englishVersionPage
                     .openPage()
                     .clickToEnglishLanguageOfSite()
                     .checkTextResults("The most phygital bank");

@@ -2,48 +2,48 @@ package tests;
 
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import pages.AlfaBankPage;
+import pages.MainPage;
 
 @Tag("Alfa")
 public class MainPageContentTests extends TestBase {
-    AlfaBankPage alfaBankPage = new AlfaBankPage();
+    MainPage mainpage = new MainPage();
 
     @Test
     void shouldCheckLogoTest() {
-            alfaBankPage
+        mainpage
                     .openPage()
                     .checkLogo();
     }
 
     @Test
     void shouldCheckBannerTest() {
-            alfaBankPage
+        mainpage
                     .openPage()
                     .checkTextResults("Бесплатная Альфа‑Карта");
     }
 
     @Test
     void shouldCheckToBecomeAClientButtonTest() {
-            alfaBankPage
+        mainpage
                     .openPage()
                     .checkToBecomeAClientButton();
     }
 
     @Test
     void shouldCheckLoginButtonTest() {
-            alfaBankPage
+        mainpage
                     .openPage()
                     .checkLoginButton();
     }
     @Test
     void shouldCheckRetailDropdownTest() {
-            alfaBankPage
+        mainpage
                     .openPage()
                     .checkRetailDropdown();
     }
     @Test
     void shouldSearchForDebitCardAndSeeResultsTest() {
-            alfaBankPage
+        mainpage
                     .openPage()
                     .waitForLoadingSite()
                     .openSearchBar()

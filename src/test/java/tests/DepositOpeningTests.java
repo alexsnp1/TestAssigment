@@ -2,16 +2,16 @@ package tests;
 
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import pages.AlfaBankPage;
+import pages.DepositOpeningPage;
 
 @Tag("Alfa")
-public class DepositOpeningPage extends TestBase{
-    AlfaBankPage alfaBankPage = new AlfaBankPage();
+public class DepositOpeningTests extends TestBase{
+    DepositOpeningPage depositOpeningPage = new DepositOpeningPage ();
 
     @Test
     void shouldNavigateToDepositOpeningPageAfterCalculationTest() {
 
-            alfaBankPage
+        depositOpeningPage
                     .openPage()
                     .checkIfAmountValueCorrect()
                     .set6MonthsDepositTerm()
