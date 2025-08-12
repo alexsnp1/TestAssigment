@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 import pages.MainPage;
 
 @Owner("alexsnp")
-@Feature("Быстрые проверка наполнения главной страницы сайта")
+@Feature("Быстрая проверка наполнения главной страницы сайта")
 @Tag("Alfa")
 public class MainPageContentTests extends TestBase {
     MainPage mainpage = new MainPage();
