@@ -13,7 +13,6 @@ import java.util.Map;
 
 public class TestBase {
     public static final String SELENOID_URL = System.getProperty("selenoid_url", "selenoid.autotests.cloud");
-
     @BeforeAll
     static void beforeAll() {
         Configuration.pageLoadStrategy = "eager";
@@ -30,12 +29,10 @@ public class TestBase {
         ));
         Configuration.browserCapabilities = capabilities;
     }
-
     @BeforeEach
     void beforeEach()  {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
     }
-
     @AfterEach
     void addAttachments() {
         Attach.screenshotAs("Last Screenshot");
